@@ -11,7 +11,9 @@
 }
 
 .ConversationInfo-title {
-    margin: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: black;
 }
 
 .ConversationInfo-pic {
@@ -24,8 +26,21 @@
     overflow: hidden; 
     white-space: nowrap;
     text-overflow: ellipsis;
+    color: grey;
+    font-size: 14px;
 }
 
 .ConversationInfo-user-fullname {
-    font-size: 15px;
+    font-size: 14px;
+    color: grey;
+    font-weight: bold;
+}
+
+.ConversationInfo-date {
+    color: grey;
+    font-size: 12px;
+}
+
+hr {
+    color: grey;
 }

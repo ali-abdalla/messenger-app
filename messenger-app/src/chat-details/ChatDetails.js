@@ -4,8 +4,7 @@ import './ChatDetails.css';
 class ChatDetails extends Component {
   render() {
     return (
-      <header className="ChatDetails-header">
-      </header>
+      <header className="ChatDetails-header"></header>
     );
   }
 }

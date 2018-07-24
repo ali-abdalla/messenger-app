@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './Conversations.css';
 import { BASE_URL } from '../environment';
 import ConversationInfo from '../shared/components/conversation-info/ConversationInfo';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import ChatDetails from '../chat-details/ChatDetails';
 
 class Conversations extends Component {
 
@@ -37,15 +39,18 @@ class Conversations extends Component {
 
   render() {
     return (
-      <div>
-        <header className="Conversations-header">
-          <img className="Conversations-user-pic" src={this.state.user.profilePicture} alt={this.state.user.fullName} />
-          <span className="Conversations-username">{this.state.user.fullName}</span>
-        </header>
-        {
-          this.state.conversations.map(el => <ConversationInfo key={el.id} conversation={el} />)
-        }
-      </div>
+      <Router>
+        <div>
+          <header className="Conversations-header">
+            <img className="Conversations-user-pic" src={this.state.user.profilePicture} alt={this.state.user.fullName} />
+            <span className="Conversations-username">{this.state.user.fullName}</span>
+          </header>
+          {
+            this.state.conversations.map(el => <Link to="/chat-details"><ConversationInfo key={el.id} conversation={el} /></Link>)
+          }
+          <Route path="/chat-details" component={ChatDetails} />
+        </div>
+      </Router>
     );
   }
 }
