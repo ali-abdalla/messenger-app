@@ -1,5 +1,41 @@
-[
-    {
-        "user": "Ali Abdallah"
-    }
-]
+{
+    "user": {
+        "fullName": "Ali Abdallah",
+        "profilePicture": "https://avatars1.githubusercontent.com/u/14368377"
+    },
+    "conversations": [
+        {
+            "image": "https://pbs.twimg.com/profile_images/972154872261853184/RnOg6UyU_400x400.jpg",
+            "name": "Google",
+            "lastMessage": {
+                "user": {
+                    "fullName": "Mohamed Hamed"
+                },
+                "content": "Yala ya gama3a we need to hangout",
+                "date": "24-07-2018T14:26:30"
+            }
+        },
+        {
+            "image": "https://zpravy.czin.eu/wp-content/uploads/icone-social-facebook.png",
+            "name": "Facebook",
+            "lastMessage": {
+                "user": {
+                    "fullName": "Ramy Khater"
+                },
+                "content": "Okay, I'm ready",
+                "date": "23-07-2018T12:26:30"
+            }
+        },
+        {
+            "image": "https://image.flaticon.com/icons/svg/3/3641.svg",
+            "name": "Github",
+            "lastMessage": {
+                "user": {
+                    "fullName": "Ali Abdallah"
+                },
+                "content": "<3",
+                "date": "23-07-2018T10:00:00"
+            }
+        }
+    ]
+}
