@@ -3,11 +3,10 @@
     height: 60px;
 }
 
-img {
+.user-pic {
     padding: 10px;
     border-radius: 50%;
     width: 40px;
-    left: 0px;
 }
 
 .Conversation-username {

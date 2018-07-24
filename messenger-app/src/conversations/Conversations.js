@@ -39,7 +39,7 @@ class Conversations extends Component {
     return (
       <div>
         <header className="Conversations-header">
-          <img src={this.state.user.profilePicture} alt={this.state.user.fullName} />
+          <img className="user-pic" src={this.state.user.profilePicture} alt={this.state.user.fullName} />
           <span className="Conversation-username">{this.state.user.fullName}</span>
         </header>
         {

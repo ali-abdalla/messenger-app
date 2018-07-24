@@ -7,11 +7,11 @@ class ConversationInfo extends Component {
         return (
             <div className="ConversationInfo">
                 <div className="image-container">
-                    <img src={this.props.conversation.image} alt=""/>
+                    <img className="conversation-pic" src={this.props.conversation.image} alt=""/>
                 </div>
                 <div class="info-container">
                     <h5 className="title">{this.props.conversation.name}</h5>
-                    <label>{this.props.conversation.lastMessage.user.fullName}</label>: {this.props.conversation.lastMessage.content}
+                    <label>{this.props.conversation.lastMessage.user.fullName}</label>: <span className="content">{this.props.conversation.lastMessage.content}</span>
                     <div className="date">{this.props.conversation.lastMessage.date}</div>
                 </div>
             </div>
