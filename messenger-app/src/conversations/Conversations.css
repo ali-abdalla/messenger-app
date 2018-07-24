@@ -1,13 +1,17 @@
 .Conversations-header {
-    background-color: #A9A9A9;
+    background-color: #CCCCCC;
+    height: 60px;
 }
 
 img {
     padding: 10px;
     border-radius: 50%;
     width: 40px;
+    left: 0px;
 }
 
-.user-fullname {
-    position: relative;
+.Conversation-username {
+    position: fixed;
+    margin-top: 23px;
+    margin-left: 10px;
 }

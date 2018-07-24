@@ -1,0 +1,22 @@
+.ConversationInfo {
+    background-color: #FFFFFF;
+}
+
+.image-container {
+    display: inline-block;
+}
+
+.info-container {
+    display: inline-block;
+}
+
+.title {
+    margin-bottom: 10px;
+}
+
+img {
+    padding: 10px;
+    border-radius: 50%;
+    width: 40px;
+}
+

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './Conversations.css';
+import { BASE_URL } from '../environment';
+import ConversationInfo from '../shared/components/conversation-info/ConversationInfo';
 
 class Conversations extends Component {
 
@@ -7,17 +9,28 @@ class Conversations extends Component {
     super();
     this.state = {
       user: {},
+      conversations: [],
       error: false
     };
-    this.getUserData();
+    this.fetchUserData();
+    this.fetchConversations();
   }
 
-  getUserData() {
-    const url = "http://localhost:3000/user";
+  fetchUserData() {
+    const url = `${BASE_URL}/user`;
     fetch(url, {method: "GET"})
       .then(response => response.json())
-      .then(user => {
-        this.setState({user: user});
+      .then(user => this.setState({user: user}))
+      .catch(err => this.setState({error: true}));
+  }
+
+  fetchConversations() {
+    const url = `${BASE_URL}/conversations`;
+    fetch(url, {method: "GET"})
+      .then(response => response.json())
+      .then(conversations => {
+        console.log(conversations);
+        this.setState({conversations: conversations})
       })
       .catch(err => this.setState({error: true}));
   }
@@ -26,12 +39,12 @@ class Conversations extends Component {
     return (
       <div>
         <header className="Conversations-header">
-          <img className="img" src={this.state.user.profile_picture}  alt="" />
-          <span className="user-fullname">{this.state.user.full_name}</span>
+          <img src={this.state.user.profilePicture} alt={this.state.user.fullName} />
+          <span className="Conversation-username">{this.state.user.fullName}</span>
         </header>
-        <div>
-          
-        </div>
+        {
+          this.state.conversations.map(el => <ConversationInfo key={el.id} conversation={el} />)
+        }
       </div>
     );
   }
