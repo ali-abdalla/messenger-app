@@ -3,13 +3,13 @@
     height: 60px;
 }
 
-.user-pic {
+.Conversations-user-pic {
     padding: 10px;
     border-radius: 50%;
     width: 40px;
 }
 
-.Conversation-username {
+.Conversations-username {
     position: fixed;
     margin-top: 23px;
     margin-left: 10px;

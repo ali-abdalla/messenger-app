@@ -39,8 +39,8 @@ class Conversations extends Component {
     return (
       <div>
         <header className="Conversations-header">
-          <img className="user-pic" src={this.state.user.profilePicture} alt={this.state.user.fullName} />
-          <span className="Conversation-username">{this.state.user.fullName}</span>
+          <img className="Conversations-user-pic" src={this.state.user.profilePicture} alt={this.state.user.fullName} />
+          <span className="Conversations-username">{this.state.user.fullName}</span>
         </header>
         {
           this.state.conversations.map(el => <ConversationInfo key={el.id} conversation={el} />)

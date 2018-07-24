@@ -2,25 +2,28 @@
     background-color: #FFFFFF;
 }
 
-.image-container {
+.ConversationInfo-image-container {
     display: inline-block;
 }
 
-.info-container {
+.ConversationInfo-info-container {
     display: inline-block;
 }
 
-.title {
-    margin-bottom: 10px;
+.ConversationInfo-title {
+    margin: 10px;
 }
 
-.conversation-pic {
-    padding: 10px;
+.ConversationInfo-pic {
+    padding: 20px;
     border-radius: 50%;
     width: 50px;
 }
 
-.content {
+.ConversationInfo-content {
     text-overflow: ellipsis;
 }
 
+.ConversationInfo-user-fullname {
+    font-size: 15px;
+}
